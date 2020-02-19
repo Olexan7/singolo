@@ -71,22 +71,75 @@ sup {
   align-items: center;
 }
 
-.right-slider,
 .left-slider {
+  padding-left: 42px;
+  padding-right: 40px;
+  padding-bottom: 5px;
+}
+.right-slider {
+  transform: rotate(180deg);
   padding-left: 40px;
   padding-right: 40px;
+  padding-top: 4px;
+}
+svg > defs > image {
+  fill: aqua;
+}
+.right-slider:hover,
+.left-slider:hover {
+  cursor: pointer;
 }
 
 .vertical-container {
   position: absolute;
-  left: 110px;
+  left: 111px;
   bottom: 50px;
+  z-index: 2;
+}
+
+.vertical-back {
+  top: 213px;
+  left: 126px;
+  width: 188px;
+  height: 333px;
+  background-image: url("img/slider/back phone 1.png");
+  background-position: -14px -135px;
+  position: absolute;
+  z-index: 3;
+}
+
+.vertical-shadow {
+  position: absolute;
+  left: 112px;
+  top: -162px;
+  z-index: 1;
 }
 
 .horizontal-container {
   position: absolute;
-  left: 425px;
-  bottom: 175px;
+  left: 545px;
+  top: -164px;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+
+.horizontal-back {
+  background-image: url("img/slider/back phone 2.png");
+  position: absolute;
+  height: 189px;
+  width: 334px;
+  z-index: 1;
+  background-position: -124px -118px;
+  top: 282px;
+  left: 484px;
+  z-index: 3;
+}
+
+.horizontal-shadow {
+  position: absolute;
+  left: 549px;
+  top: -163px;
+  transform: rotateY(-188deg) rotate(90deg);
 }
 
 /*SERVISES*/
@@ -177,22 +230,22 @@ img {
 }
 
 .pen {
-  background-image: url("assets/pen.svg");
+  background-image: url("img/services/pen.svg");
 }
 .bulb {
-  background-image: url("assets/bulb.svg");
+  background-image: url("img/services/bulb.svg");
 }
 .heart {
-  background-image: url("assetsheart.svg");
+  background-image: url("img/services/heart.svg");
 }
 .phone {
-  background-image: url("assets/phone.svg");
+  background-image: url("img/services/phone.svg");
 }
 .bubble {
-  background-image: url("assets/bubble.svg");
+  background-image: url("img/services/bubble.svg");
 }
 .star {
-  background-image: url("assets/star.svg");
+  background-image: url("img/services/star.svg");
 }
 /*
 .layout-3-column {
