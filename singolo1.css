@@ -5,7 +5,7 @@ body {
   font-family: "Lato";
 }
 
-/* HEADER*/
+/*---------- HEADER--------*/
 .header {
   height: 89px;
   background-color: #2d303a;
@@ -16,6 +16,7 @@ body {
   padding-left: 30px;
 }
 
+/*LOGO*/
 .logo-singolo {
   font-size: 25px;
   color: #ffffff;
@@ -24,14 +25,16 @@ body {
   text-transform: uppercase;
   line-height: 8px;
   padding-left: 8px;
-  padding-bottom: 8px;
+  padding-bottom: 2px;
 }
 
-sup {
+.logo-singolo-sup {
   color: #f06c64;
+  font-weight: 400px;
   padding: 0px;
   margin: 0px;
 }
+
 /*Navigation*/
 .header-nav {
   font-size: 12px;
@@ -60,6 +63,7 @@ sup {
 .nav-link:hover {
   color: #f06c64;
 }
+
 /*SLIDER*/
 .slider-block {
   width: 1020px;
@@ -82,14 +86,13 @@ sup {
   padding-right: 40px;
   padding-top: 4px;
 }
-svg > defs > image {
-  fill: aqua;
-}
+
 .right-slider:hover,
 .left-slider:hover {
   cursor: pointer;
 }
 
+/*vertical phone*/
 .vertical-container {
   position: absolute;
   left: 111px;
@@ -102,7 +105,7 @@ svg > defs > image {
   left: 126px;
   width: 188px;
   height: 333px;
-  background-image: url("img/slider/back phone 1.png");
+  background-image: url("assets/back phone 1.png");
   background-position: -14px -135px;
   position: absolute;
   z-index: 3;
@@ -111,20 +114,21 @@ svg > defs > image {
 .vertical-shadow {
   position: absolute;
   left: 112px;
-  top: -162px;
+  top: 148px;
   z-index: 1;
 }
 
+/*horizontal phone*/
 .horizontal-container {
   position: absolute;
   left: 545px;
-  top: -164px;
+  top: 146px;
   transform: rotate(90deg);
   z-index: 2;
 }
 
 .horizontal-back {
-  background-image: url("img/slider/back phone 2.png");
+  background-image: url("assets/back phone 2.png");
   position: absolute;
   height: 189px;
   width: 334px;
@@ -138,7 +142,7 @@ svg > defs > image {
 .horizontal-shadow {
   position: absolute;
   left: 549px;
-  top: -163px;
+  top: 147px;
   transform: rotateY(-188deg) rotate(90deg);
 }
 
@@ -165,19 +169,21 @@ h2 {
 .services-logo {
   font-size: 30px;
   font-weight: 900;
-  /*padding-top: 67px;*/
-  /*padding-bottom: 20px;*/
+  padding-top: 3px;
   line-height: 18px;
 }
 
 .services-header-info {
   font-size: 18px;
   font-weight: 300;
-  margin-top: 30px;
+  margin-top: 27px;
   line-height: 30px;
+  text-align: justify;
 }
+
+/*Colums with icons*/
 .layout-3-column {
-  margin-top: 48px;
+  margin-top: 45px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -188,22 +194,17 @@ h2 {
   display: flex;
   margin: 0;
   padding: 0;
-}
-.services-info {
-  /*padding-top: 45px;*/
-  /*padding-bottom: 0;*/
   margin-bottom: 15px;
 }
 
 .services-info p {
-  width: 219px;
+  width: 220px;
   font-size: 12px;
   font-weight: 400;
   text-align: justify;
-  /*margin: 10px 10px;*/
-  line-height: 22px;
-  /*margin-right: 0;*/
-  margin-left: 20px;
+  line-height: 21px;
+  margin-left: 21px;
+  margin-top: 10px;
 }
 
 .services-info h2 {
@@ -213,14 +214,9 @@ h2 {
   line-height: 18px;
 }
 
-img {
-  margin-top: 23%;
-}
-
 .icon-border {
-  height: 56px;
-  width: 56px;
-  padding: 0px;
+  height: 55px;
+  width: 55px;
   border: 2px solid #666d89;
   border-radius: 100%;
   text-align: center;
@@ -230,22 +226,22 @@ img {
 }
 
 .pen {
-  background-image: url("img/services/pen.svg");
+  background-image: url("assets/pen.svg");
 }
 .bulb {
-  background-image: url("img/services/bulb.svg");
+  background-image: url("assets/bulb.svg");
 }
 .heart {
-  background-image: url("img/services/heart.svg");
+  background-image: url("assets/heart.svg");
 }
 .phone {
-  background-image: url("img/services/phone.svg");
+  background-image: url("assets/phone.svg");
 }
 .bubble {
-  background-image: url("img/services/bubble.svg");
+  background-image: url("assets/bubble.svg");
 }
 .star {
-  background-image: url("img/services/star.svg");
+  background-image: url("assets/star.svg");
 }
 /*
 .layout-3-column {
