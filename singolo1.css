@@ -28,10 +28,11 @@ body {
   padding-bottom: 2px;
 }
 
-.logo-singolo-sup {
+.logo-singolo:after {
+  content: "*";
+  font-size: 26px;
   color: #f06c64;
-  font-weight: 400px;
-  padding: 0px;
+  padding-top: 1px;
   margin: 0px;
 }
 
@@ -47,8 +48,6 @@ body {
 
 .nav-link {
   color: #ffffff;
-  font-weight: 200;
-
   display: inline-block;
   text-decoration: none;
   transition: color 0.1s linear;
@@ -56,8 +55,18 @@ body {
 
 .nav-link::before {
   content: "·";
+  font-weight: 400;
   margin-left: 11px;
   margin-right: 12px;
+  color: gray;
+}
+
+.nav-link:first-child:before {
+  content: none;
+}
+
+.nav-link:first-child {
+  color: #f06c64;
 }
 
 .nav-link:hover {
