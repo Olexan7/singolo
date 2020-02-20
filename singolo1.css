@@ -5,7 +5,7 @@ body {
   font-family: "Lato";
 }
 
-/*---------- HEADER--------*/
+/*---------- HEADER BLOCK--------*/
 .header {
   height: 89px;
   background-color: #2d303a;
@@ -16,7 +16,8 @@ body {
   padding-left: 30px;
 }
 
-/*LOGO*/
+/*==LOGO==*/
+
 .logo-singolo {
   font-size: 25px;
   color: #ffffff;
@@ -36,7 +37,8 @@ body {
   margin: 0px;
 }
 
-/*Navigation*/
+/*==Navigation==*/
+
 .header-nav {
   font-size: 12px;
   text-align: right;
@@ -73,7 +75,8 @@ body {
   color: #f06c64;
 }
 
-/*SLIDER*/
+/*--------SLIDER BLOCK----------*/
+
 .slider-block {
   width: 1020px;
   height: 594px;
@@ -84,24 +87,38 @@ body {
   align-items: center;
 }
 
+/*==LEFT & RIGHT ICON==*/
+
 .left-slider {
-  padding-left: 42px;
-  padding-right: 40px;
-  padding-bottom: 5px;
+  width: 16px;
+  height: 27px;
+  padding-left: 84px;
+  margin-bottom: 5px;
+  background-image: url("assets/chev.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .right-slider {
+  width: 16px;
+  height: 27px;
   transform: rotate(180deg);
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 4px;
+  padding-left: 80px;
+  margin-bottom: 5px;
+  background-image: url("assets/chev.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .right-slider:hover,
 .left-slider:hover {
   cursor: pointer;
+  background-image: url("assets/chev white.svg");
+  transition: 0.2s;
 }
 
-/*vertical phone*/
+/*==VERTICAL PHONE==*/
+
 .vertical-container {
   position: absolute;
   left: 111px;
@@ -127,7 +144,7 @@ body {
   z-index: 1;
 }
 
-/*horizontal phone*/
+/*==HORIZONTAL PHONE==*/
 .horizontal-container {
   position: absolute;
   left: 545px;
@@ -155,7 +172,7 @@ body {
   transform: rotateY(-188deg) rotate(90deg);
 }
 
-/*SERVISES*/
+/*==SERVISES==*/
 .servises-block {
   color: #767e9e;
   background-color: #f2f2f2;
@@ -203,7 +220,7 @@ h2 {
   display: flex;
   margin: 0;
   padding: 0;
-  margin-bottom: 15px;
+  margin-bottom: 21px;
 }
 
 .services-info p {
@@ -232,6 +249,8 @@ h2 {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
+  margin-left: 1px;
+  margin-top: 2px;
 }
 
 .pen {
@@ -252,8 +271,3 @@ h2 {
 .star {
   background-image: url("assets/star.svg");
 }
-/*
-.layout-3-column {
-  display: flex;
-  flex-wrap: wrap;
-}*/
