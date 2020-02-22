@@ -24,7 +24,7 @@ body {
   font-weight: 400;
   text-align: left;
   text-transform: uppercase;
-  line-height: 8px;
+  line-height: 10px;
   padding-left: 10px;
   padding-bottom: 2px;
 }
@@ -85,6 +85,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 /*==LEFT & RIGHT ICON==*/
@@ -94,7 +95,7 @@ body {
   height: 27px;
   padding-left: 84px;
   margin-bottom: 5px;
-  background-image: url("assets/chev.svg");
+  background-image: url("assets/slider/chev.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -105,7 +106,7 @@ body {
   transform: rotate(180deg);
   padding-left: 80px;
   margin-bottom: 5px;
-  background-image: url("assets/chev.svg");
+  background-image: url("assets/slider/chev.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -113,7 +114,7 @@ body {
 .right-slider:hover,
 .left-slider:hover {
   cursor: pointer;
-  background-image: url("assets/chev white.svg");
+  background-image: url("assets/slider/chev white.svg");
   transition: 0.2s;
 }
 
@@ -121,17 +122,17 @@ body {
 
 .vertical-container {
   position: absolute;
-  left: 276px;
-  bottom: 50px;
+  left: 111px;
+  bottom: 82px;
   z-index: 2;
 }
 
 .vertical-back {
-  top: 213px;
-  left: 291px;
+  top: 118px;
+  left: 126px;
   width: 188px;
   height: 333px;
-  background-image: url("assets/back phone 1.png");
+  background-image: url("assets/slider/back phone 1.png");
   background-position: -14px -135px;
   position: absolute;
   z-index: 3;
@@ -139,35 +140,35 @@ body {
 
 .vertical-shadow {
   position: absolute;
-  left: 277px;
-  top: 148px;
+  left: 112px;
+  top: 53px;
   z-index: 1;
 }
 
 /*==HORIZONTAL PHONE==*/
 .horizontal-container {
   position: absolute;
-  left: 710px;
-  top: 146px;
+  left: 546px;
+  top: 51px;
   transform: rotate(90deg);
   z-index: 2;
 }
 
 .horizontal-back {
-  background-image: url("assets/back phone 2.png");
+  background-image: url("assets/slider/back phone 2.png");
   position: absolute;
   height: 189px;
   width: 334px;
   background-position: -124px -118px;
-  top: 282px;
-  left: 649px;
+  top: 187px;
+  left: 485px;
   z-index: 3;
 }
 
 .horizontal-shadow {
   position: absolute;
-  left: 715px;
-  top: 147px;
+  left: 550px;
+  top: 52px;
   transform: rotateY(-188deg) rotate(90deg);
 }
 
@@ -253,20 +254,20 @@ h2 {
 }
 
 .pen {
-  background-image: url("assets/pen.svg");
+  background-image: url("assets/services/pen.svg");
 }
 .bulb {
-  background-image: url("assets/bulb.svg");
+  background-image: url("assets/services/bulb.svg");
 }
 .heart {
-  background-image: url("assets/heart.svg");
+  background-image: url("assets/services/heart.svg");
 }
 .phone {
-  background-image: url("assets/phone.svg");
+  background-image: url("assets/services/phone.svg");
 }
 .bubble {
-  background-image: url("assets/bubble.svg");
+  background-image: url("assets/services/bubble.svg");
 }
 .star {
-  background-image: url("assets/star.svg");
+  background-image: url("assets/services/star.svg");
 }
