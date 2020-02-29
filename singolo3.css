@@ -38,6 +38,63 @@ body {
   text-align: justify;
 }
 
+.user-information {
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+}
+
+/*FORMS*/
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  color: #f48c8f;
+  font-weight: 400;
+}
+
+.form-name,
+.form-subject,
+.form-text,
+.form-mail {
+  width: 619px;
+  margin-top: 16px;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d6564f;
+}
+
+.form-text {
+  resize: none;
+}
+
+/*CONTACTS*/
+
+.infomation {
+  color: #f0d8d9;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.links-cont {
+  text-decoration: none;
+  color: #f0d8d9;
+  padding-bottom: 5px;
+}
+
+.contact-location:after {
+  content: url("./assets/singolo3/contacts/location.svg");
+}
 /*--FOOTER BLOCK--*/
 
 .footer {
