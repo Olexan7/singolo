@@ -10,16 +10,21 @@
     <link rel="stylesheet" type="text/css" href="singolo3.css" />
     <title>Singolo</title>
   </head>
+
   <body>
+    <!--QUOTE BLOCK-->
     <section class="block-forms">
       <div class="wrapper">
         <h2 class="quote-header">Get a Quote</h2>
+
         <p class="quote-info">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
           Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
           lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
           tortor mauris condimentum nibh.
         </p>
+
+        <!--BLOCK WICH FORMS-->
         <div class="user-information">
           <div class="forms-container">
             <form class="forms" action="#">
@@ -27,39 +32,53 @@
                 class=" input-wind form-name"
                 type="text"
                 placeholder="Name (Required)"
+                required
+                pattern="^[a-zA-Z]{1,20}$"
               />
+
               <input
                 class="input-wind form-mail"
                 type="text"
                 placeholder="Email (Required)"
+                required
+                pattern="\S+@[a-z]+.[a-z]+"
               />
+
               <input
                 class="input-wind form-subject"
                 type="text"
                 placeholder="Subject"
               />
+
               <textarea
                 class="input-wind form-text"
                 placeholder="Describe your project in detail..."
               ></textarea>
-              <!--<input class="form-submit" type="submit" value="Submit" />-->
+
+              <input class="form-submit" type="submit" value="Submit" />
             </form>
           </div>
+
+          <!--CONTACTS IN COLUMN-->
           <div class="infomation">
             <h3 class="contact-header">Contact Information</h3>
+
             <p class="contact-info">
               Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
               Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla
               sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
               consequat felis.
             </p>
+
             <div class="column-contacts">
               <a class="links-cont contact-location" href="#"
                 >Elm St. 14/05 Lost City</a
               >
+
               <a class="links-cont contact-phone" href="tel:03528 331 86 35"
                 >03528 331 86 35</a
               >
+
               <a class="links-cont contact-email" href="mailto:info@singolo.com"
                 >info@singolo.com</a
               >
@@ -68,6 +87,8 @@
         </div>
       </div>
     </section>
+
+    <!--FOOTER BLOCK-->
     <footer class="footer">
       <div class="wrapper">
         <object
@@ -75,27 +96,31 @@
           data="./assets/singolo3/social-media/copyright.svg"
           type="image/svg+xml"
         ></object>
+
         <div class="social">
-          <object
-            class="facebook"
-            data="./assets/singolo3/social-media/facebook.svg"
-            type="image/svg+xml"
-          ></object>
-          <object
-            class="google"
-            data="./assets/singolo3/social-media/google.svg"
-            type="image/svg+xml"
-          ></object>
-          <object
-            class="twitter"
-            data="./assets/singolo3/social-media/twitter.svg"
-            type="image/svg+xml"
-          ></object>
-          <object
-            class="link"
-            data="./assets/singolo3/social-media/link.svg"
-            type="image/svg+xml"
-          ></object>
+          <img
+            class="socialicon"
+            src="./assets/singolo3/social-media/facebook.svg"
+            alt="fecebook icon"
+          />
+
+          <img
+            class="socialicon"
+            src="./assets/singolo3/social-media/google.svg"
+            alt="google icon"
+          />
+
+          <img
+            class="socialicon"
+            src="./assets/singolo3/social-media/twitter.svg"
+            alt="twitter icon"
+          />
+
+          <img
+            class="socialicon"
+            src="./assets/singolo3/social-media/link.svg"
+            alt="link coint"
+          />
         </div>
       </div>
     </footer>

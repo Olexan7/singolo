@@ -49,9 +49,11 @@ body {
 }
 
 /*FORMS*/
+
 .forms-container {
   padding-right: 10px;
 }
+
 .forms {
   display: flex;
   flex-direction: column;
@@ -59,6 +61,7 @@ body {
   padding-top: 12px;
 }
 
+/*input styles*/
 .input-wind {
   width: 604px;
   height: 37px;
@@ -67,10 +70,15 @@ body {
   background-color: #d6564f;
   color: #f0d8d9;
   padding-left: 15px;
-  padding-right: 0px;
-  padding-top: 0px;
+  padding-right: 0;
+  padding-top: 0;
   margin-top: 8px;
   margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.input-wind:focus {
+  background-color: #f48c8f;
 }
 
 .input-wind::-webkit-input-placeholder {
@@ -86,6 +94,7 @@ body {
   font-size: 12px;
   font-weight: 400;
 }
+
 .input-wind::-ms-input-placeholder {
   font-family: "Lato";
   color: #f48c8f;
@@ -93,11 +102,31 @@ body {
   font-weight: 400;
 }
 
+/*textarea*/
 .form-text {
   padding-top: 11px;
   font-family: "Lato";
   resize: none;
   height: 190px;
+}
+
+/*submit button*/
+.form-submit {
+  margin-top: 10px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Lato";
+  width: 150px;
+  background-color: #f0d8d9;
+  color: #2d303a;
+  transition: 0.2s;
+}
+
+.form-submit:hover {
+  cursor: pointer;
+  background-color: #d6564f;
+  color: #f0d8d9;
 }
 
 /*CONTACTS*/
@@ -123,6 +152,7 @@ body {
   padding-top: 8px;
 }
 
+/*contact links*/
 .column-contacts {
   padding-top: 23px;
   display: flex;
@@ -133,6 +163,11 @@ body {
   text-decoration: none;
   color: #f0d8d9;
   padding-bottom: 6px;
+  transition: 0.2s;
+}
+
+.links-cont:hover {
+  text-decoration: underline;
 }
 
 .contact-location:before {
@@ -159,10 +194,12 @@ body {
   height: 76px;
   background-color: #2d303a;
 }
+
 .footer .wrapper {
   display: flex;
   justify-content: space-between;
 }
+
 .copyright {
   padding-left: 42px;
   padding-top: 18px;
@@ -173,9 +210,10 @@ body {
   padding-top: 21px;
 }
 
-.google,
-.facebook,
-.twitter,
-.link {
+.socialicon {
   padding-left: 2px;
+}
+
+.socialicon:hover {
+  cursor: pointer;
 }
