@@ -49,28 +49,55 @@ body {
 }
 
 /*FORMS*/
-
+.forms-container {
+  padding-right: 10px;
+}
 .forms {
   display: flex;
   flex-direction: column;
-  color: #f48c8f;
   font-weight: 400;
+  padding-top: 12px;
 }
 
-.form-name,
-.form-subject,
-.form-text,
-.form-mail {
-  width: 619px;
-  margin-top: 16px;
-  height: 38px;
+.input-wind {
+  width: 604px;
+  height: 37px;
   border: none;
   border-radius: 5px;
   background-color: #d6564f;
+  color: #f0d8d9;
+  padding-left: 15px;
+  padding-right: 0px;
+  padding-top: 0px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.input-wind::-webkit-input-placeholder {
+  font-family: "Lato";
+  color: #f48c8f;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.input-wind::-moz-placeholder {
+  font-family: "Lato";
+  color: #f48c8f;
+  font-size: 12px;
+  font-weight: 400;
+}
+.input-wind::-ms-input-placeholder {
+  font-family: "Lato";
+  color: #f48c8f;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .form-text {
+  padding-top: 11px;
+  font-family: "Lato";
   resize: none;
+  height: 190px;
 }
 
 /*CONTACTS*/
@@ -79,22 +106,51 @@ body {
   color: #f0d8d9;
   display: flex;
   flex-direction: column;
+  margin-left: 11px;
 }
 
 .contact-header {
+  margin: 0px;
   font-size: 18px;
   font-weight: 900;
+  padding-top: 19px;
+}
+
+.contact-info {
+  margin: 0px;
+  line-height: 22px;
+  text-align: justify;
+  padding-top: 8px;
+}
+
+.column-contacts {
+  padding-top: 23px;
+  display: flex;
+  flex-direction: column;
 }
 
 .links-cont {
   text-decoration: none;
   color: #f0d8d9;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
 }
 
-.contact-location:after {
+.contact-location:before {
   content: url("./assets/singolo3/contacts/location.svg");
+  padding-right: 13px;
+  padding-left: 3px;
 }
+
+.contact-phone:before {
+  content: url("./assets/singolo3/contacts/phone.svg");
+  padding-right: 13px;
+}
+
+.contact-email:before {
+  content: url("./assets/singolo3/contacts/mail.svg");
+  padding-right: 13px;
+}
+
 /*--FOOTER BLOCK--*/
 
 .footer {
