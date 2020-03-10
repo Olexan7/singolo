@@ -1,5 +1,9 @@
 # singolo
 
+## Ссылка на развернутый проект: https://olexan7.github.io/singolo/
+
+По невнимательности засабмитил репозиторий
+
 ### task singolo1:
 
 final commit f139d51756afe3f72e05d17a39bcf99ab21a0c38
