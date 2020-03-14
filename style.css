@@ -223,6 +223,7 @@ h2 {
   line-height: 30px;
   padding-right: 20px;
   text-align: justify;
+  overflow: hidden;
 }
 
 /*COLUMS WITH ICON*/
@@ -239,6 +240,8 @@ h2 {
   padding-bottom: 20px;
   width: 33.33333%;
   display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .services-info p {
@@ -366,6 +369,10 @@ h2 {
   padding-right: 30px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.picture:nth-child(1n + 13) {
+  display: none;
 }
 
 .picture {
