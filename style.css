@@ -376,9 +376,19 @@ h2 {
 }
 
 .picture {
-  padding: 10px;
+  margin: 10px;
   width: 220px;
   height: 187px;
+}
+
+.picture:hover {
+  cursor: pointer;
+}
+
+.picture-click {
+  background-color: #f06c64;
+  margin: 5px;
+  padding: 5px;
 }
 
 /*----ABOUT AS BLOCK-----*/
