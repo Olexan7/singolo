@@ -100,6 +100,16 @@ body {
   position: relative;
 }
 
+.slider-two {
+  position: absolute;
+  height: 594px;
+  width: 1020px;
+  top: -281px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+
 /*==LEFT & RIGHT ICON==*/
 
 .left-slider {
@@ -110,6 +120,7 @@ body {
   background-image: url("assets/singolo1/slider/chev.svg");
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 4;
 }
 
 .right-slider {
@@ -121,6 +132,7 @@ body {
   background-image: url("assets/singolo1/slider/chev.svg");
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 4;
 }
 
 .right-slider:hover,

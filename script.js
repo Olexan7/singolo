@@ -83,7 +83,7 @@ const sliderBrowse = () => {
   let rightButton = document.getElementById("right-button");
   let sliderBlock = document.getElementById("slider-block");
   let sliderOne = document.getElementById("slider-one");
-  let sliderTwo = document.getElementById();
+  let sliderTwo = document.getElementById("slider-two");
   let numberSrider = 0;
 
   rightButton.onclick = () => {
@@ -92,9 +92,15 @@ const sliderBrowse = () => {
     switch (numberSrider) {
       case 0:
         sliderBlock.style.background = "#f06c64";
+        sliderOne.style.display = "block";
+        sliderTwo.style.display = "none";
         break;
       case 1:
         sliderBlock.style.background = "#648bf0";
+        sliderOne.style.display = "none";
+        sliderTwo.style.display = "block";
+        sliderTwo.style.backgroundImage =
+          'url("assets/singolo1/slider/Slide-2.png")';
         break;
     }
   };
@@ -104,10 +110,16 @@ const sliderBrowse = () => {
     if (numberSrider < 0) numberSrider = 1;
     switch (numberSrider) {
       case 0:
-        sliderBlock.style.backgroundColor = "#f06c64";
+        sliderBlock.style.background = "#f06c64";
+        sliderOne.style.display = "block";
+        sliderTwo.style.display = "none";
         break;
       case 1:
-        sliderBlock.style.backgroundColor = "#648bf0";
+        sliderBlock.style.background = "#648bf0";
+        sliderOne.style.display = "none";
+        sliderTwo.style.display = "block";
+        sliderTwo.style.backgroundImage =
+          'url("assets/singolo1/slider/Slide-2.png")';
         break;
     }
   };
