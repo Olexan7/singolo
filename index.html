@@ -291,21 +291,22 @@
         <!--BLOCK WICH FORMS-->
         <div class="user-information">
           <div class="forms-container">
-            <form class="forms" action="#">
+            <form class="forms" action="#" id="form">
               <input
                 class=" input-wind form-name"
                 type="text"
                 placeholder="Name (Required)"
                 required
                 pattern="^[a-zA-Z]{1,20}$"
+                value="myName"
               />
 
               <input
                 class="input-wind form-mail"
-                type="text"
+                type="email"
                 placeholder="Email (Required)"
                 required
-                pattern="\S+@[a-z]+.[a-z]+"
+                value="q@aff.rr"
               />
 
               <input
@@ -319,10 +320,14 @@
                 placeholder="Describe your project in detail..."
               ></textarea>
 
-              <input class="form-submit" type="submit" value="Submit" />
+              <input
+                class="form-submit"
+                id="submit-button"
+                type="submit"
+                value="Submit"
+              />
             </form>
           </div>
-
           <!--CONTACTS IN COLUMN-->
           <div class="infomation">
             <h3 class="contact-header">Contact Information</h3>
@@ -348,6 +353,15 @@
               >
             </div>
           </div>
+        </div>
+      </div>
+      <div id="message-block" class="hidden-block hidden">
+        <div id="message">
+          <h3>The letter was sent</h3>
+          <div id="subject-message"></div>
+          <br />
+          <div id="text-message"></div>
+          <button id="hide-message">OK</button>
         </div>
       </div>
     </section>

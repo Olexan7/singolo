@@ -6,10 +6,12 @@ window.onload = function() {
   eventClickVerticalPhone(); //Slider. Активация вериткального телефона
   eventClickHorizontalPhone(); // Slider. Активация горизонтального телефона
 
-  sliderBrowse();
+  sliderBrowse(); //Slider. Переключение слайдов
 
   eventClickNavigationPortfolio(); //
   eventClickPicturesPortfolio(); // рамка при нажатии на картинку блок portfolio
+
+  formMessage(); //GET A QUOTE
 };
 
 /** HEADER*/
@@ -154,4 +156,51 @@ const eventClickPicturesPortfolio = () => {
     if (event.target.tagName == "IMG")
       event.target.classList.add("picture-click");
   });
+};
+
+/**GET A QUOTE */
+
+/**окно поверх макета c информацией */
+const formMessage = () => {
+  let form = document.getElementById("form");
+  let messageBlock = document.getElementById("message-block");
+
+  let subjectMessage = document.getElementById("subject-message");
+  let textMessage = document.getElementById("text-message");
+
+  /**событие - отправка формы */
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+
+    let inputSubject = document.querySelector(".form-subject").value;
+    let inputText = document.querySelector(".form-text").value;
+
+    subjectMessage.append(getSubjectMessage(inputSubject));
+    textMessage.append(getDescriptionMessage(inputText));
+
+    messageBlock.classList.remove("hidden");
+  });
+
+  /**закрыть Информационное окно */
+  document.getElementById("hide-message").onclick = () => {
+    messageBlock.classList.add("hidden");
+    subjectMessage.innerHTML = "";
+    textMessage.innerHTML = "";
+  };
+};
+/**данные с поля subject */
+const getSubjectMessage = (submitMessage = "Without subject") => {
+  if (submitMessage.length == 0) {
+    return (innerHTML = "Without subject");
+  } else {
+    return (innerHTML = "Subject: " + submitMessage);
+  }
+};
+/** данные с поля description*/
+const getDescriptionMessage = (descriptionMessage = "Without description") => {
+  if (descriptionMessage.length == 0) {
+    return (innerHTML = "Without description");
+  } else {
+    return (innerHTML = "Description: " + descriptionMessage);
+  }
 };
