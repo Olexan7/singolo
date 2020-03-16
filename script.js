@@ -137,13 +137,29 @@ const eventClickNavigationPortfolio = () => {
     navigationPortfolio
       .querySelectorAll("li")
       .forEach(el => el.classList.remove("active-portfolio"));
-    if (event.target.tagName == "LI")
+    if (event.target.tagName == "LI") {
       event.target.classList.add("active-portfolio");
-    getNewPicturePosition();
+      getNewPositionPicture(); //Portfolio. Переключение картинок
+    }
   });
 };
 
-const getNewPicturePosition = () => {};
+const getNewPositionPicture = () => {
+  let pictureList = [...document.querySelectorAll(".picture")];
+
+  let pictureListRandom = pictureList.sort(() => {
+    return Math.random() - 0.5;
+  });
+
+  pictureList.forEach(el => {
+    el.remove();
+  });
+
+  for (let i = 0; i < pictureListRandom.length; i++) {
+    //добавляем новое расположение
+    document.getElementById("colums-pictures").append(pictureListRandom[i]);
+  }
+};
 
 /*обработчик событий: нажатие блока картинок в portfolio*/
 const eventClickPicturesPortfolio = () => {
