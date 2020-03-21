@@ -1,1 +1,3 @@
-singolo: https://Olexan7.github.io/singolo/
+# singolo
+
+## Ссылка на развернутый проект: https://olexan7.github.io/singolo/

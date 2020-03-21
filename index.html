@@ -10,23 +10,23 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Singolo</title>
   </head>
-  <body>
+  <body id="body">
     <!--SINGOLO1-->
 
     <!--HEADER BLOCK-->
-    <header class="header">
+    <header class="header" id="header-block">
       <div class="wrapper">
         <div class="logo">
           <h1 class="logo-singolo">Singolo</h1>
         </div>
 
         <nav class="header-nav">
-          <ul class>
-            <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="#">Services</a>
-            <a class="nav-link" href="#">Portfolio</a>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Contact</a>
+          <ul id="navigation-list-header">
+            <a class="nav-link active-header" href="#body">Home</a>
+            <a class="nav-link" href="#services-block">Services</a>
+            <a class="nav-link" href="#portfolio-block">Portfolio</a>
+            <a class="nav-link" href="#about-block">About</a>
+            <a class="nav-link" href="#contact-block">Contact</a>
           </ul>
         </nav>
       </div>
@@ -34,47 +34,60 @@
 
     <!-- SLIDER BLOCK-->
 
-    <section class="slider-block">
+    <section class="slider-block" id="slider-block">
       <div class="wrapper">
-        <div class="left-slider"></div>
+        <div class="slider">
+          <div class="left-slider" id="left-button"></div>
+          <div class="slide-container">
+            <div class="phons item active-item" id="slider-one">
+              <div class="vertical-phone">
+                <img
+                  class="vertical-container"
+                  src="assets/singolo1/slider/phone.png"
+                  alt=""
+                />
+                <div class="phone-button" id="vertical-phone-button"></div>
 
-        <div class="vertical-phone">
-          <img
-            class="vertical-container"
-            src="assets/singolo1/slider/phone.png"
-            alt=""
-          />
+                <div class="vertical-back" id="vertical-back-id"></div>
 
-          <div class="vertical-back"></div>
+                <img
+                  class="vertical-shadow"
+                  src="assets/singolo1/slider/Shadow.png"
+                />
+              </div>
 
-          <img
-            class="vertical-shadow"
-            src="assets/singolo1/slider/Shadow.png"
-          />
+              <div class="horizontal-phone">
+                <img
+                  class="horizontal-container"
+                  src="assets/singolo1/slider/phone.png"
+                  alt=""
+                />
+
+                <div class="phone-button" id="horizontal-phone-button"></div>
+
+                <div class="horizontal-back" id="horizontal-back-id"></div>
+
+                <img
+                  class="horizontal-shadow"
+                  src="assets/singolo1/slider/Shadow.png"
+                />
+              </div>
+            </div>
+            <div class="slider-two item" id="slider-two">
+              <img
+                class="slider-two-img"
+                src="/assets/singolo1/slider/Slide-2.png"
+              />
+            </div>
+          </div>
+          <div class="right-slider" id="right-button"></div>
         </div>
-
-        <div class="horizontal-phone">
-          <img
-            class="horizontal-container"
-            src="assets/singolo1/slider/phone.png"
-            alt=""
-          />
-
-          <div class="horizontal-back"></div>
-
-          <img
-            class="horizontal-shadow"
-            src="assets/singolo1/slider/Shadow.png"
-          />
-        </div>
-
-        <div class="right-slider"></div>
       </div>
     </section>
 
     <!--SERVICES BLOCK-->
 
-    <section class="servises-block">
+    <section class="servises-block" id="services-block">
       <div class="wrapper">
         <div class="services-header">
           <h2 class="services-logo">Our Services</h2>
@@ -158,7 +171,7 @@
 
     <!--SINGOLO2-->
     <!--BLOCK PORTFOLIO-->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio-block">
       <div class="wrapper">
         <h2 class="header-portfolio">Portfolio</h2>
 
@@ -168,15 +181,15 @@
         </p>
 
         <nav class="navigation-portfolio">
-          <ul class="nav-list">
-            <li class="link-nav">All</li>
+          <ul class="nav-list" id="navigation-list-portfolio">
+            <li class="link-nav active-portfolio">All</li>
             <li class="link-nav">Web Design</li>
             <li class="link-nav">Graphic Design</li>
             <li class="link-nav">Artwork</li>
           </ul>
         </nav>
 
-        <div class="layout-gallery">
+        <div class="layout-gallery" id="colums-pictures">
           <img class="picture" src="assets/singolo2/portfolio/Project1.png" />
           <img class="picture" src="assets/singolo2/portfolio/Project2.png" />
           <img class="picture" src="assets/singolo2/portfolio/Project3.png" />
@@ -193,7 +206,7 @@
       </div>
     </section>
     <!--BLOCK ABOUT US-->
-    <section class="about">
+    <section class="about" id="about-block">
       <div class="wrapper">
         <h2 class="header-about">About Us</h2>
 
@@ -273,7 +286,7 @@
 
     <!--SINGOLO3-->
     <!--QUOTE BLOCK-->
-    <section class="block-forms">
+    <section class="block-forms" id="contact-block">
       <div class="wrapper">
         <h2 class="quote-header">Get a Quote</h2>
 
@@ -287,7 +300,7 @@
         <!--BLOCK WICH FORMS-->
         <div class="user-information">
           <div class="forms-container">
-            <form class="forms" action="#">
+            <form class="forms" action="#" id="form">
               <input
                 class=" input-wind form-name"
                 type="text"
@@ -298,10 +311,9 @@
 
               <input
                 class="input-wind form-mail"
-                type="text"
+                type="email"
                 placeholder="Email (Required)"
                 required
-                pattern="\S+@[a-z]+.[a-z]+"
               />
 
               <input
@@ -315,10 +327,14 @@
                 placeholder="Describe your project in detail..."
               ></textarea>
 
-              <input class="form-submit" type="submit" value="Submit" />
+              <input
+                class="form-submit"
+                id="submit-button"
+                type="submit"
+                value="Submit"
+              />
             </form>
           </div>
-
           <!--CONTACTS IN COLUMN-->
           <div class="infomation">
             <h3 class="contact-header">Contact Information</h3>
@@ -344,6 +360,15 @@
               >
             </div>
           </div>
+        </div>
+      </div>
+      <div id="message-block" class="hidden-block hidden">
+        <div id="message">
+          <h3>The letter was sent</h3>
+          <div id="subject-message"></div>
+          <br />
+          <div id="text-message"></div>
+          <button id="hide-message">OK</button>
         </div>
       </div>
     </section>
@@ -380,5 +405,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
