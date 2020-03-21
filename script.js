@@ -8,10 +8,10 @@ window.onload = function() {
 
   sliderBrowse(); //Slider. Переключение слайдов
 
-  eventClickNavigationPortfolio(); //
+  eventClickNavigationPortfolio(); // меню навигации portfolio
   eventClickPicturesPortfolio(); // рамка при нажатии на картинку блок portfolio
 
-  formMessage(); //GET A QUOTE
+  formMessage(); //GET A QUOTE. отображение текста с формы
 };
 
 /** HEADER*/
@@ -83,47 +83,58 @@ const eventClickHorizontalPhone = () => {
 const sliderBrowse = () => {
   let leftButton = document.getElementById("left-button");
   let rightButton = document.getElementById("right-button");
-  let sliderBlock = document.getElementById("slider-block");
-  let sliderOne = document.getElementById("slider-one");
-  let sliderTwo = document.getElementById("slider-two");
-  let numberSrider = 0;
+  let currentItem = 0;
+  let backColor = ["#f06c64", "#648BF0"];
+  let items = document.querySelectorAll(".item");
+  let isEnable = true;
 
   rightButton.onclick = () => {
-    numberSrider++;
-    if (numberSrider > 1) numberSrider = 0;
-    switch (numberSrider) {
-      case 0:
-        sliderBlock.style.background = "#f06c64";
-        sliderOne.style.display = "block";
-        sliderTwo.style.display = "none";
-        break;
-      case 1:
-        sliderBlock.style.background = "#648bf0";
-        sliderOne.style.display = "none";
-        sliderTwo.style.display = "block";
-        sliderTwo.style.backgroundImage =
-          'url("assets/singolo1/slider/Slide-2.png")';
-        break;
+    if (isEnable) {
+      nextItem(currentItem);
+      document.getElementById("slider-block").style.backgroundColor =
+        backColor[currentItem];
     }
   };
 
   leftButton.onclick = () => {
-    numberSrider--;
-    if (numberSrider < 0) numberSrider = 1;
-    switch (numberSrider) {
-      case 0:
-        sliderBlock.style.background = "#f06c64";
-        sliderOne.style.display = "block";
-        sliderTwo.style.display = "none";
-        break;
-      case 1:
-        sliderBlock.style.background = "#648bf0";
-        sliderOne.style.display = "none";
-        sliderTwo.style.display = "block";
-        sliderTwo.style.backgroundImage =
-          'url("assets/singolo1/slider/Slide-2.png")';
-        break;
+    if (isEnable) {
+      previousItem(currentItem);
+      document.getElementById("slider-block").style.backgroundColor =
+        backColor[currentItem];
     }
+  };
+
+  previousItem = n => {
+    hideItem("to-right");
+    changeCurrentItem(n - 1);
+    showItem("from-left");
+  };
+
+  nextItem = n => {
+    hideItem("to-left");
+    changeCurrentItem(n + 1);
+    showItem("from-right");
+  };
+
+  hideItem = direction => {
+    isEnable = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener("animationend", function() {
+      this.classList.remove("active-item", direction);
+    });
+  };
+
+  showItem = direction => {
+    items[currentItem].classList.add("next", direction);
+    items[currentItem].addEventListener("animationend", function() {
+      this.classList.add("active-item");
+      this.classList.remove("next", direction);
+      isEnable = true;
+    });
+  };
+
+  changeCurrentItem = n => {
+    currentItem = (n + items.length) % items.length;
   };
 };
 
