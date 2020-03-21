@@ -213,6 +213,7 @@ const formMessage = () => {
     messageBlock.classList.add("hidden");
     subjectMessage.innerHTML = "";
     textMessage.innerHTML = "";
+    form.reset();
   };
 };
 /**данные с поля subject */
