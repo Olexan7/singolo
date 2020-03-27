@@ -12,6 +12,10 @@ window.onload = function() {
   eventClickPicturesPortfolio(); // рамка при нажатии на картинку блок portfolio
 
   formMessage(); //GET A QUOTE. отображение текста с формы
+
+  showMenu();
+  hideMenu();
+  eventClickMobileMenu(); //мобильное меню
 };
 
 /** HEADER*/
@@ -31,8 +35,7 @@ const eventClickNavigationHeader = () => {
 
 /*Плавный скролл по якорям*/
 const headerNavigationScroll = () => {
-  let anchors = document.querySelectorAll("a.nav-link");
-
+  let anchors = document.querySelectorAll("a.nav-link, .menu-link");
   for (let anchor of anchors) {
     anchor.addEventListener("click", e => {
       e.preventDefault();
@@ -216,6 +219,7 @@ const formMessage = () => {
     form.reset();
   };
 };
+
 /**данные с поля subject */
 const getSubjectMessage = (submitMessage = "Without subject") => {
   if (submitMessage.length == 0) {
@@ -231,4 +235,42 @@ const getDescriptionMessage = (descriptionMessage = "Without description") => {
   } else {
     return (innerHTML = "Description: " + descriptionMessage);
   }
+};
+
+const showMenu = () => {
+  let checkBox = document.getElementById("menu");
+  let menu = document.querySelector(".menu-container");
+  let menuBack = document.querySelector(".menu-back");
+
+  checkBox.addEventListener("click", () => {
+    if (checkBox.checked) {
+      menu.style.left = 0;
+      menuBack.style.display = "block";
+    } else {
+      menu.style.left = "-100%";
+      menuBack.style.display = "none";
+    }
+  });
+};
+
+const eventClickMobileMenu = () => {
+  let menuLink = document.querySelectorAll(".menu-link");
+  menuLink.forEach(element => {
+    element.addEventListener("click", event => {
+      menuLink.forEach(elem => {
+        elem.classList.remove("active-header");
+      });
+      event.target.classList.add("active-header");
+    });
+  });
+};
+
+const hideMenu = () => {
+  let menuBack = document.querySelector(".menu-back");
+
+  menuBack.addEventListener("click", () => {
+    document.getElementById("menu").checked = false;
+    document.querySelector(".menu-container").style.left = "-100%";
+    document.querySelector(".menu-back").style.display = "none";
+  });
 };
