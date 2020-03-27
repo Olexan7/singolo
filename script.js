@@ -261,6 +261,9 @@ const eventClickMobileMenu = () => {
         elem.classList.remove("active-header");
       });
       event.target.classList.add("active-header");
+      document.getElementById("menu").checked = false;
+      document.querySelector(".menu-container").style.left = "-100%";
+      document.querySelector(".menu-back").style.display = "none";
     });
   });
 };
