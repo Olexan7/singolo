@@ -17,10 +17,30 @@
     <!--HEADER BLOCK-->
     <header class="header" id="header-block">
       <div class="wrapper">
+        <input type="checkbox" class="toogle-nav" name="toogle" id="menu" />
+        <label for="menu" class="toogle-nav menu-icon"
+          ><img src="/assets/singolo1/Burger-menu-icon.svg" alt="icon"
+        /></label>
+
+        <div class="hidden-menu">
+          <div class="menu-container">
+            <div class="logo">
+              <h1 class="logo-singolo menu-logo">Singolo</h1>
+            </div>
+            <ul class="menu-mobile">
+              <a class="menu-link active-header" href="#body">Home</a>
+              <a class="menu-link" href="#services-block">Services</a>
+              <a class="menu-link" href="#portfolio-block">Portfolio</a>
+              <a class="menu-link" href="#about-block">About</a>
+              <a class="menu-link" href="#contact-block">Contact</a>
+            </ul>
+          </div>
+          <div class="menu-back"></div>
+        </div>
+
         <div class="logo">
           <h1 class="logo-singolo">Singolo</h1>
         </div>
-
         <nav class="header-nav">
           <ul id="navigation-list-header">
             <a class="nav-link active-header" href="#body">Home</a>
@@ -32,7 +52,6 @@
         </nav>
       </div>
     </header>
-
     <!-- SLIDER BLOCK-->
 
     <section class="slider-block" id="slider-block">
