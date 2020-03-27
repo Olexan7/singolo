@@ -147,6 +147,8 @@
     height: 250.73px;
     top: -179px;
     left: -390px;
+    background-position: -11px -107px;
+    background-size: 448px;
   }
 
   .vertical-shadow {
@@ -164,6 +166,8 @@
     width: 250.73px;
     top: -128px;
     left: -13px;
+    background-position: -96px -93px;
+    background-size: 448px;
   }
 
   .horizontal-shadow {
@@ -206,7 +210,9 @@
   .header-nav {
     display: none;
   }
-
+  .hidden-menu {
+    display: block;
+  }
   .menu-icon {
     z-index: 7;
     display: block;
@@ -257,6 +263,8 @@
     height: 122.43px;
     top: -205px;
     left: -395px;
+    background-size: 208px 216px;
+    background-position: -4px -50px;
   }
 
   .vertical-shadow {
@@ -277,6 +285,8 @@
     width: 122.43px;
     top: -180px;
     left: 10px;
+    background-size: 208px 216px;
+    background-position: -42px -45px;
   }
 
   .horizontal-shadow {
@@ -427,6 +437,6 @@
     display: none;
   }
 }
-
+/*
 @media all and (max-width: 375px) {
-}
+}*/
